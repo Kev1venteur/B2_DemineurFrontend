@@ -14,6 +14,7 @@ const app = new Vue({
     tyoto: 'sdf',
     gamePlayable: true,
     winOrLooseMessage: '',
+  },
   methods: {
     cliquerCase: function(x, y) {
       if (this.gamePlayable) {
