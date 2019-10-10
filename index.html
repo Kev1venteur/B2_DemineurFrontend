@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Démineur 💣 !</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./index.js" type="module"></script>
+  </head>
+  <body>
+    <div id="demineur">
+      <h1>{{ winOrLooseMessage }}</h1>
+      <div>
+        <!-- {{ tyoto }} -->
+      </div>
+      <table oncontextmenu="return false">
+        <tr v-for="(lignes, x) in demineur.grid">
+          <th v-for="(nombres, y) in lignes" v-on:click.left="cliquerCase(x, y)" v-on:click.right="flaggerCase(x, y)">
+            {{ nombres }}
+          </th>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
+
+<style>
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    height: 100vh;
+    width: 100vw;
+  }
+  #demineur{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  th{
+    height: 16vh;
+    width: 8vw;
+    font-size: 10vh;
+  }
+
+</style>
