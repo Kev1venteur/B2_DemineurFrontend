@@ -1,4 +1,4 @@
-# demineurFrontend
+# DemineurFrontend
 Takeover of the minesweeper code in NodeJS from the teacher to use it in Frontend ( better with Google Chrome).
 
 ## How to Start
